@@ -1,3 +1,17 @@
+
+ENV['RACK_ENV'] = 'test'
+
+# Bring in the contents of the `app.rb` file. The below is equivalent to: require_relative '../app.rb'
+require File.join(File.dirname(__FILE__), '..', 'app.rb')
+
+# Require all the testing gems(RSpec, Capybara, and the Capybara/RSpec package that lets them talk to each other).
+require 'capybara'
+require 'capybara/rspec'
+require 'rspec'
+
+# Tell Capybara to talk to Chitter; Tell Capybara that any instructions like visit('/') should be directed at the application called 'BookmarkManager'.
+Capybara.app = ChitterManager
+
 require 'simplecov'
 require 'simplecov-console'
 
