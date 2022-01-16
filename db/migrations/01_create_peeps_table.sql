@@ -1,0 +1,1 @@
+CREATE TABLE peeps(user_name, user_handle VARCHAR(240));
