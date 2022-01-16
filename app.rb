@@ -1,7 +1,7 @@
 require 'sinatra/base'
 require 'sinatra/reloader'
 
-class BookmarkManager < Sinatra::Base
+class Chitter < Sinatra::Base
   configure :development do
     register Sinatra::Reloader
   end
@@ -10,5 +10,10 @@ class BookmarkManager < Sinatra::Base
     'Hello World'
   end
 
+  get '/post_message' do
+    'Post Peep'
+  end
+  
   run! if app_file == $0
+
 end

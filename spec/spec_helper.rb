@@ -10,7 +10,7 @@ require 'capybara/rspec'
 require 'rspec'
 
 # Tell Capybara to talk to Chitter; Tell Capybara that any instructions like visit('/') should be directed at the application called 'BookmarkManager'.
-Capybara.app = ChitterManager
+Capybara.app = Chitter
 
 require 'simplecov'
 require 'simplecov-console'
