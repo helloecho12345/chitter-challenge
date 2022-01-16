@@ -7,13 +7,17 @@ class Chitter < Sinatra::Base
   end
 
   get '/' do
-    'Hello World'
+    'Chitter'
   end
 
-  get '/post_message' do
+  get '/post_peep' do
     'Post Peep'
   end
   
+  get '/view_peeps' do
+    'Test_Peep1'
+  end
+
   run! if app_file == $0
 
 end
